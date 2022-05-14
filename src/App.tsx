@@ -5,9 +5,7 @@ import Routings from "lib/router/Routings";
 
 const App = () => (
   <Router>
-    <Layout>
-      <Routings />
-    </Layout>
+    <Routings />
   </Router>
 );
 

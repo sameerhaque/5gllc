@@ -1,4 +1,3 @@
-import * as React from "react";
 import {
   Box,
   Button,
@@ -11,6 +10,8 @@ import {
   Input,
   useColorModeValue as mode,
 } from "@chakra-ui/react";
+import type * as React from "react";
+
 import BackgroundImage from "lib/assets/background.png";
 import Logo from "lib/assets/logo-dark.png";
 

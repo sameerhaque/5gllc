@@ -32,8 +32,8 @@ const BulkUpload = () => {
   const stopAnimation = () => controls.stop();
 
   return (
-    <Box p={10} height={"100%"}>
-      <AspectRatio width={"100%"} height={200}>
+    <Box p={10} height="100%">
+      <AspectRatio width="100%" height={200}>
         <Box
           borderColor="gray.300"
           borderStyle="dashed"
@@ -48,7 +48,7 @@ const BulkUpload = () => {
           as={motion.div}
           initial="rest"
           animate="rest"
-          w={"100%"}
+          w="100%"
           whileHover="hover"
         >
           <Box position="relative" height="100%" width="100%">
@@ -73,14 +73,14 @@ const BulkUpload = () => {
                   p="8"
                   textAlign="center"
                   spacing="1"
-                  alignItems={"center"}
-                  justifyContent={"center"}
+                  alignItems="center"
+                  justifyContent="center"
                 >
                   <Text fontWeight="light" mb={15}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Nullam eleifend cursus enim id tempus.
                   </Text>
-                  <Button backgroundColor={"#012076"} color={"white"} w={150}>
+                  <Button backgroundColor="#012076" color="white" w={150}>
                     Upload File
                   </Button>
                 </Stack>

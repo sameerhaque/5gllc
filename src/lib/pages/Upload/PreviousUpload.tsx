@@ -40,7 +40,7 @@ const RenderItem: React.FC<UploadItem> = ({
   date,
   status,
 }) => {
-  const getBadge = (status: Status) => {
+  const getBadge = () => {
     let bgColor = ``;
     let title = ``;
     switch (status) {
@@ -70,7 +70,7 @@ const RenderItem: React.FC<UploadItem> = ({
         alignItems="center"
         justifyContent="center"
       >
-        <BadgeIcon color={getBadge(status).bgColor} />
+        <BadgeIcon color={getBadge().bgColor} />
       </Box>
       <Box width="10%" textAlign="center">
         <Text>{`#${batch}`}</Text>
@@ -88,13 +88,13 @@ const RenderItem: React.FC<UploadItem> = ({
         justifyContent="center"
       >
         <Box
-          border={`1px solid ${getBadge(status).bgColor}`}
-          color={getBadge(status).bgColor}
+          border={`1px solid ${getBadge().bgColor}`}
+          color={getBadge().bgColor}
           p={0}
           width="75%"
           textAlign="center"
         >
-          <Text fontSize={12}>{getBadge(status).title}</Text>
+          <Text fontSize={12}>{getBadge().title}</Text>
         </Box>
       </Box>
       <Box width="20%" textAlign="center">
@@ -174,11 +174,11 @@ const PreviousUploads: React.FC<PreviousUploadProps> = ({ lists }) => {
         <Box width="20%" textAlign="center">
           <Text>User</Text>
         </Box>
-        <Box width="5%"></Box>
+        <Box width="5%" />
       </Flex>
       {lists.map((list, idx) => (
         <RenderItem
-          key={idx}
+          key={idx.toString()}
           batch={list.batch}
           status={list.status}
           date={list.date}

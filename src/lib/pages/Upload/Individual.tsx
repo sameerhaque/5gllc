@@ -7,7 +7,6 @@ import {
   Select,
   VStack,
 } from "@chakra-ui/react";
-import type * as React from "react";
 
 const IndividualUpload = () => {
   return (

@@ -3,7 +3,6 @@ import {
   Box,
   Flex,
   Heading,
-  Icon,
   Text,
   Image,
   useColorModeValue as mode,
@@ -45,7 +44,7 @@ const UploadMain: React.FC<any> = ({ children }) => {
           <Flex align="center" px="6" py="4">
             <Link href="/individual-upload" _hover={{ textDecoration: "none" }}>
               <HStack
-                borderBottom={"solid"}
+                borderBottom="solid"
                 borderBottomColor={
                   page === Page.INDIVIDUAL ? "#3ED4DA" : "gray.200"
                 }
@@ -71,7 +70,7 @@ const UploadMain: React.FC<any> = ({ children }) => {
             </Link>
             <Link href="/bulk-upload" _hover={{ textDecoration: "none" }}>
               <HStack
-                borderBottom={"solid"}
+                borderBottom="solid"
                 borderBottomColor={page === Page.BULK ? "#3ED4DA" : "gray.200"}
                 borderBottomWidth={1}
                 py={2}

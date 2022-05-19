@@ -11,7 +11,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-import React from "react";
+import type * as React from "react";
 import BadgeIcon from "./BadgeIcon";
 import Dots from "../../assets/SVGs/dots.svg";
 
@@ -20,12 +20,6 @@ export enum Status {
   WARNING = `warning`,
   FAILED = `failed`,
 }
-
-const BadgeColor = {
-  successful: {
-    bgColor: `#28C66F`,
-  },
-};
 
 export interface UploadItem {
   batch: string;
@@ -89,16 +83,16 @@ const RenderItem: React.FC<UploadItem> = ({
       </Box>
       <Box
         width="25%"
-        display={"flex"}
-        alignItems={"center"}
-        justifyContent={"center"}
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
       >
         <Box
           border={`1px solid ${getBadge(status).bgColor}`}
           color={getBadge(status).bgColor}
           p={0}
-          width={"75%"}
-          textAlign={"center"}
+          width="75%"
+          textAlign="center"
         >
           <Text fontSize={12}>{getBadge(status).title}</Text>
         </Box>
@@ -124,23 +118,23 @@ const PreviousUploads: React.FC<PreviousUploadProps> = ({ lists }) => {
         as="h3"
         pb={1}
         fontWeight="bold"
-        fontSize={"3xl"}
-        //   borderBottom={"1px solid #BBBBBB"}
+        fontSize="3xl"
+        //   borderBottom="1px solid #BBBBBB"
       >
         Previous Uploads
       </Heading>
       <Box className="prev-actions-handle" py={3}>
         <HStack borderRadius={10} border="1px solid #F3F3F3">
-          <Button backgroundColor={"#012076"} color={"white"} fontWeight={400}>
+          <Button backgroundColor="#012076" color="white" fontWeight={400}>
             All
           </Button>
-          <Button backgroundColor={"white"} fontWeight={400}>
+          <Button backgroundColor="white" fontWeight={400}>
             Successful
           </Button>
-          <Button backgroundColor={"white"} fontWeight={400}>
+          <Button backgroundColor="white" fontWeight={400}>
             Warning
           </Button>
-          <Button backgroundColor={"white"} fontWeight={400}>
+          <Button backgroundColor="white" fontWeight={400}>
             Failed
           </Button>
         </HStack>
@@ -154,30 +148,30 @@ const PreviousUploads: React.FC<PreviousUploadProps> = ({ lists }) => {
         borderRadius={10}
         my={3}
         border="1px solid #F3F3F3"
-        alignItems={"center"}
+        alignItems="center"
         py={2}
       >
         <Box
-          width={"5%"}
-          display={"flex"}
-          alignItems={"center"}
+          width="5%"
+          display="flex"
+          alignItems="center"
           justifyContent="center"
         >
           <Checkbox />
         </Box>
-        <Box width={"10%"} textAlign="center">
+        <Box width="10%" textAlign="center">
           <Text>Batch #</Text>
         </Box>
-        <Box width={"15%"} textAlign="center">
+        <Box width="15%" textAlign="center">
           <Text># Of Sites</Text>
         </Box>
-        <Box width={"20%"} textAlign="center">
+        <Box width="20%" textAlign="center">
           <Text>Date</Text>
         </Box>
-        <Box width={"25%"} textAlign="center">
+        <Box width="25%" textAlign="center">
           <Text>Status</Text>
         </Box>
-        <Box width={"20%"} textAlign="center">
+        <Box width="20%" textAlign="center">
           <Text>User</Text>
         </Box>
         <Box width="5%"></Box>

@@ -4,7 +4,7 @@ import {
   IconButton,
   useColorModeValue as mode,
 } from "@chakra-ui/react";
-import * as React from "react";
+import type * as React from "react";
 import { HiLocationMarker, HiPencilAlt, HiTrash } from "react-icons/hi";
 
 interface DescriptionProps {

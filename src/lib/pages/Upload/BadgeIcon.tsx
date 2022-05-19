@@ -1,4 +1,4 @@
-import * as React from "react";
+import type * as React from "react";
 
 const SvgComponent: React.FC<any> = ({ color }) => (
   <div style={{ padding: 8, borderRadius: 8, backgroundColor: `${color}10` }}>

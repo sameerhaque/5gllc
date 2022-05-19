@@ -8,7 +8,6 @@ import {
   Text,
   useColorModeValue as mode,
 } from "@chakra-ui/react";
-import * as React from "react";
 import { HiPlus } from "react-icons/hi";
 import { Description } from "./Description";
 

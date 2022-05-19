@@ -1,14 +1,4 @@
-import React from "react";
-import {
-  AspectRatio,
-  Box,
-  Button,
-  Container,
-  Heading,
-  Input,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { AspectRatio, Box, Button, Input, Stack, Text } from "@chakra-ui/react";
 import { motion, useAnimation } from "framer-motion";
 import PreviousUploads, { Status, UploadItem } from "./PreviousUpload";
 

@@ -75,7 +75,7 @@ const NavLink = ({ key, children }: { key: any; children: ILinks }) => (
         </MenuButton>
         <MenuList>
           {children.child.map((item, index) => (
-            <MenuItem key={index}>
+            <MenuItem key={index.toString()}>
               <Link
                 href={item.value}
                 _hover={{

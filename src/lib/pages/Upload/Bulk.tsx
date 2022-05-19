@@ -1,28 +1,28 @@
 import { AspectRatio, Box, Button, Input, Stack, Text } from "@chakra-ui/react";
 import { motion, useAnimation } from "framer-motion";
-import PreviousUploads, { Status, UploadItem } from "./PreviousUpload";
+import PreviousUploads, { Status } from "./PreviousUpload";
 
-const lists: UploadItem[] = [
+const lists: any[] = [
   {
     batch: "#5036",
     sites: 24,
     date: "1 May 2022",
     status: Status.SUCCESSFUL,
-    user: "John Smith",
+    user: "John Smith1",
   },
   {
-    batch: "#5036",
-    sites: 24,
-    date: "1 May 2022",
+    batch: "#5037",
+    sites: 44,
+    date: "1 June 2022",
     status: Status.WARNING,
-    user: "John Smith",
+    user: "John Smith2",
   },
   {
-    batch: "#5036",
-    sites: 24,
-    date: "1 May 2022",
+    batch: "#5038",
+    sites: 20,
+    date: "1 July 2022",
     status: Status.FAILED,
-    user: "John Smith",
+    user: "John Smith3",
   },
 ];
 

@@ -89,14 +89,14 @@ const NavLink = ({ key, children }: { key: any; children: ILinks }) => (
         </MenuList>
       </Menu>
     ) : (
-      //eslint-disable-next-line
+      // eslint-disable-next-line
       <Link
         px={2}
         py={1}
         rounded="md"
         _hover={{
           textDecoration: "none",
-          //eslint-disable-next-line
+          // eslint-disable-next-line
           bg: useColorModeValue("gray.200", "gray.700"),
         }}
         href="#"

@@ -4,6 +4,9 @@ import Layout from "lib/layout";
 import Home from "lib/pages/home";
 import Login from "lib/pages/login";
 import Test from "lib/pages/test";
+import BulkUpload from "lib/pages/Upload/Bulk";
+import IndividualUpload from "lib/pages/Upload/Individual";
+import UploadMain from "lib/pages/Upload";
 
 export const routes: Array<PathRouteProps> = [
   {
@@ -24,4 +27,25 @@ export const routes: Array<PathRouteProps> = [
   },
 ];
 
-export const privateRoutes: Array<PathRouteProps> = [];
+export const privateRoutes: Array<PathRouteProps> = [
+  {
+    path: "/bulk-upload",
+    element: (
+      <Layout>
+        <UploadMain>
+          <BulkUpload />
+        </UploadMain>
+      </Layout>
+    ),
+  },
+  {
+    path: "/individual-upload",
+    element: (
+      <Layout>
+        <UploadMain>
+          <IndividualUpload />
+        </UploadMain>
+      </Layout>
+    ),
+  },
+];

@@ -1,4 +1,3 @@
-import * as React from "react";
 import {
   Box,
   Button,
@@ -11,8 +10,11 @@ import {
   Input,
   useColorModeValue as mode,
 } from "@chakra-ui/react";
+import type * as React from "react";
+
 import BackgroundImage from "lib/assets/background.png";
 import Logo from "lib/assets/logo-dark.png";
+import "./Login.css";
 
 const Login: React.FC = () => {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -20,7 +22,12 @@ const Login: React.FC = () => {
   };
 
   return (
-    <Flex align="center" minH="100vh" bgImage={BackgroundImage}>
+    <Flex
+      align="center"
+      minH="100vh"
+      className="login-screen"
+      bgImage={BackgroundImage}
+    >
       <Box
         maxW="6xl"
         mx="auto"
@@ -44,6 +51,7 @@ const Login: React.FC = () => {
               shadow={{ md: "lg" }}
             >
               <Img alt="logo" objectFit="cover" src={Logo} />
+              <br />
               <Box mb="8" textAlign={{ base: "center", md: "start" }}>
                 <Heading size="lg" mb="2" fontWeight="extrabold">
                   Login

@@ -47,11 +47,11 @@ const Links: ILinks[] = [
     child: [
       {
         name: "Bulk Upload",
-        value: "/",
+        value: "/bulk-upload",
       },
       {
         name: "Invidual Upload",
-        value: "/",
+        value: "/individual-upload",
       },
     ],
   },
@@ -75,7 +75,16 @@ const NavLink = ({ key, children }: { key: any; children: ILinks }) => (
         </MenuButton>
         <MenuList>
           {children.child.map((item, index) => (
-            <MenuItem key={index}>{item.name}</MenuItem>
+            <MenuItem key={index}>
+              <Link
+                href={item.value}
+                _hover={{
+                  textDecoration: "none",
+                }}
+              >
+                {item.name}
+              </Link>
+            </MenuItem>
           ))}
         </MenuList>
       </Menu>

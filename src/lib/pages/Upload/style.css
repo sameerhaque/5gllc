@@ -1,0 +1,28 @@
+.sm-full-width {
+  display: flex;
+}
+
+.chakra-aspect-ratio::before {
+  padding-bottom: unset !important;
+}
+
+.prev-actions-handle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 48em) {
+  .sm-full-width {
+    display: block;
+  }
+  .sm-full-width .right-bar {
+    margin-left: unset;
+  }
+  .prev-actions-handle {
+    display: block;
+  }
+  .prev-actions-handle .right-selection {
+    margin-top: 10px;
+  }
+}

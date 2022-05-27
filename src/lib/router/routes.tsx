@@ -7,6 +7,7 @@ import Test from "lib/pages/test";
 import BulkUpload from "lib/pages/Upload/Bulk";
 import IndividualUpload from "lib/pages/Upload/Individual";
 import UploadMain from "lib/pages/Upload";
+import BlogList from "lib/pages/bloglist";
 
 export const routes: Array<PathRouteProps> = [
   {
@@ -45,6 +46,14 @@ export const privateRoutes: Array<PathRouteProps> = [
         <UploadMain>
           <IndividualUpload />
         </UploadMain>
+      </Layout>
+    ),
+  },
+  {
+    path: "/blog-list",
+    element: (
+      <Layout>
+        <BlogList />
       </Layout>
     ),
   },

@@ -6,7 +6,6 @@ import {
   InputGroup,
   InputLeftElement,
 } from "@chakra-ui/react";
-import type * as React from "react";
 import { BsSearch } from "react-icons/bs";
 
 export const TableActions = () => {

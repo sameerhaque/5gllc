@@ -1,5 +1,4 @@
 import { Box, Img, Stack } from "@chakra-ui/react";
-import type * as React from "react";
 
 interface UserProps {
   data: {

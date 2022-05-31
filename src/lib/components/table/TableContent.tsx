@@ -33,7 +33,7 @@ export const TableContent = () => {
         </Thead>
         <Tbody>
           {data.map((row, index) => (
-            <Tr key={index}>
+            <Tr key={index.toString()}>
               {columns.map((column, idx) => {
                 const cell = row[column.accessor as keyof typeof row];
                 const element = column.Cell?.(cell) ?? cell;

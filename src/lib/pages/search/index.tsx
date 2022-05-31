@@ -16,7 +16,7 @@ const CarrierSearch = () => {
         timeline={false}
         fullscreenButton={false}
         animation={false}
-      ></Viewer>
+      />
     </Box>
   );
 };

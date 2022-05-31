@@ -5,7 +5,6 @@ import {
   Text,
   useColorModeValue as mode,
 } from "@chakra-ui/react";
-import type * as React from "react";
 import { data } from "./_data";
 
 export const TablePagination = () => {

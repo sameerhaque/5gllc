@@ -9,7 +9,6 @@ import {
   Tr,
   useColorModeValue as mode,
 } from "@chakra-ui/react";
-import type * as React from "react";
 import { columns, data } from "./_data";
 
 export const TableContent = () => {
@@ -22,7 +21,7 @@ export const TableContent = () => {
               <Th
                 whiteSpace="nowrap"
                 scope="col"
-                key={index}
+                key={index.toString()}
                 textAlign="center"
                 borderRightWidth="1px"
                 borderRightColor="#E2E8F0"
@@ -35,19 +34,19 @@ export const TableContent = () => {
         <Tbody>
           {data.map((row, index) => (
             <Tr key={index}>
-              {columns.map((column, index) => {
+              {columns.map((column, idx) => {
                 const cell = row[column.accessor as keyof typeof row];
                 const element = column.Cell?.(cell) ?? cell;
                 return (
                   <Td
                     whiteSpace="nowrap"
-                    key={index}
+                    key={idx.toString()}
                     alignItems="center"
                     textAlign="center"
                     borderRightWidth="1px"
                     borderRightColor="#E2E8F0"
                   >
-                    {index === 0 && <Checkbox mr={2} />}
+                    {idx === 0 && <Checkbox mr={2} />}
                     {element}
                   </Td>
                 );

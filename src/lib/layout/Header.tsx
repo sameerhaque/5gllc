@@ -57,7 +57,7 @@ const Links: ILinks[] = [
   },
   {
     name: "Carrier interest Search",
-    value: "",
+    value: "/search",
   },
 ];
 
@@ -99,7 +99,7 @@ const NavLink = ({ key, children }: { key: any; children: ILinks }) => (
           // eslint-disable-next-line
           bg: useColorModeValue("gray.200", "gray.700"),
         }}
-        href="#"
+        href={children.value}
       >
         {children.name}
       </Link>

@@ -21,20 +21,6 @@ import "./Login.css";
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setError("");
-    setLoading(true);
-    setTimeout(() => {
-      if (email === "test@test.com" && password == "testtest") {
-        localStorage.setItem("auth", "success");
-        navigate("/home");
-      } else {
-        setError("Login Failed.");
-      }
-      setLoading(false);
-    }, 2000);
-  };
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -43,6 +29,21 @@ const Login: React.FC = () => {
   const [error, setError] = useState("");
 
   const [disabled, setDisabled] = useState(false);
+
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setError("");
+    setLoading(true);
+    setTimeout(() => {
+      if (email === "test@test.com" && password === "testtest") {
+        localStorage.setItem("auth", "success");
+        navigate("/home");
+      } else {
+        setError("Login Failed.");
+      }
+      setLoading(false);
+    }, 2000);
+  };
 
   useEffect(() => {
     if (email.length > 0 && password.length > 0) {

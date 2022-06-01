@@ -10,8 +10,7 @@ const RequireAuth = ({
   redirectTo = "/login",
 }: PrivateRouteProps) => {
   // add your own authentication logic here
-  const isAuth = localStorage.getItem("auth");
-  const isAuthenticated = isAuth ? true : false;
+  const isAuthenticated = localStorage.getItem("auth");
 
   return isAuthenticated ? (
     (children as React.ReactElement)

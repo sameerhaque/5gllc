@@ -9,17 +9,48 @@ import {
   FormControl,
   Input,
   useColorModeValue as mode,
+  Text,
+  Spinner,
 } from "@chakra-ui/react";
 import type * as React from "react";
-
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import BackgroundImage from "lib/assets/background.png";
 import Logo from "lib/assets/logo-dark.png";
 import "./Login.css";
 
 const Login: React.FC = () => {
+  const navigate = useNavigate();
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setError("");
+    setLoading(true);
+    setTimeout(() => {
+      if (email === "test@test.com" && password == "testtest") {
+        localStorage.setItem("auth", "success");
+        navigate("/home");
+      } else {
+        setError("Login Failed.");
+      }
+      setLoading(false);
+    }, 2000);
   };
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const [error, setError] = useState("");
+
+  const [disabled, setDisabled] = useState(false);
+
+  useEffect(() => {
+    if (email.length > 0 && password.length > 0) {
+      setDisabled(false);
+    } else {
+      setDisabled(true);
+    }
+  }, [email, password]);
 
   return (
     <Flex
@@ -60,19 +91,36 @@ const Login: React.FC = () => {
               <form onSubmit={onSubmit}>
                 <Stack spacing="4">
                   <FormControl id="email">
-                    <Input type="email" autoComplete="email" />
+                    <Input
+                      type="email"
+                      autoComplete="email"
+                      name="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
                   </FormControl>
                   <FormControl>
-                    <Input type="password" autoComplete="current-password" />
+                    <Input
+                      type="password"
+                      autoComplete="current-password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
                   </FormControl>
                   <Button
                     type="submit"
                     colorScheme="blue"
                     size="lg"
                     fontSize="md"
+                    disabled={disabled || loading}
                   >
-                    Submit
+                    {loading ? <Spinner /> : <Text>Submit</Text>}
                   </Button>
+                  {error && (
+                    <Text color="red" textAlign="center" size="xs">
+                      {error}
+                    </Text>
+                  )}
                 </Stack>
               </form>
             </Box>

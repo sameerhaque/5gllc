@@ -12,14 +12,6 @@ import CarrierSearch from "lib/pages/search";
 
 export const routes: Array<PathRouteProps> = [
   {
-    path: "/",
-    element: (
-      <Layout>
-        <Home />
-      </Layout>
-    ),
-  },
-  {
     path: "/login",
     element: <Login />,
   },
@@ -30,6 +22,14 @@ export const routes: Array<PathRouteProps> = [
 ];
 
 export const privateRoutes: Array<PathRouteProps> = [
+  {
+    path: "/home",
+    element: (
+      <Layout>
+        <Home />
+      </Layout>
+    ),
+  },
   {
     path: "/bulk-upload",
     element: (

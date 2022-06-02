@@ -35,11 +35,11 @@ interface ILinks {
 const Links: ILinks[] = [
   {
     name: "Dashboard",
-    value: "/",
+    value: "/home",
   },
   {
     name: "Site Search",
-    value: "/",
+    value: "/#",
   },
   {
     name: "Add Sites",
@@ -57,7 +57,7 @@ const Links: ILinks[] = [
   },
   {
     name: "Carrier interest Search",
-    value: "/search",
+    value: "/#",
   },
 ];
 

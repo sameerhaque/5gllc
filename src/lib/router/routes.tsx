@@ -8,7 +8,6 @@ import BulkUpload from "lib/pages/Upload/Bulk";
 import IndividualUpload from "lib/pages/Upload/Individual";
 import UploadMain from "lib/pages/Upload";
 import BlogList from "lib/pages/bloglist";
-import CarrierSearch from "lib/pages/search";
 
 export const routes: Array<PathRouteProps> = [
   {
@@ -55,14 +54,6 @@ export const privateRoutes: Array<PathRouteProps> = [
     element: (
       <Layout>
         <BlogList />
-      </Layout>
-    ),
-  },
-  {
-    path: "/search",
-    element: (
-      <Layout>
-        <CarrierSearch />
       </Layout>
     ),
   },

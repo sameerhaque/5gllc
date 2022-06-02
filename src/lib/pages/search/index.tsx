@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import * as Cesium from "cesium";
+import Cesium from "cesium";
 import { Viewer } from "resium";
 import "./search.css";
 

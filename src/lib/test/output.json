@@ -1,0 +1,82 @@
+{
+  "numTotalTestSuites": 6,
+  "numPassedTestSuites": 6,
+  "numFailedTestSuites": 0,
+  "numPendingTestSuites": 0,
+  "numTotalTests": 5,
+  "numPassedTests": 5,
+  "numFailedTests": 0,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "startTime": 1654035461332,
+  "success": true,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["", "TileService test suite"],
+          "fullName": " TileService test suite createTileSets method should be called",
+          "status": "passed",
+          "title": "createTileSets method should be called",
+          "duration": 312,
+          "failureMessages": []
+        }
+      ],
+      "startTime": 1654035466794,
+      "endTime": 1654035467106,
+      "status": "passed",
+      "message": "",
+      "name": "/home/geospatialweb/5gllc/ssot-ui/src/lib/services/tile/index.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["", "LogService test suite"],
+          "fullName": " LogService test suite consoleLog method should be called",
+          "status": "passed",
+          "title": "consoleLog method should be called",
+          "duration": 29,
+          "failureMessages": []
+        }
+      ],
+      "startTime": 1654035466816,
+      "endTime": 1654035466845,
+      "status": "passed",
+      "message": "",
+      "name": "/home/geospatialweb/5gllc/ssot-ui/src/lib/services/log/index.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["", "CesiumService test suite"],
+          "fullName": " CesiumService test suite createCesiumViewer method should be called",
+          "status": "passed",
+          "title": "createCesiumViewer method should be called",
+          "duration": 6,
+          "failureMessages": []
+        },
+        {
+          "ancestorTitles": ["", "CesiumService test suite"],
+          "fullName": " CesiumService test suite loadTileSets method should be called",
+          "status": "passed",
+          "title": "loadTileSets method should be called",
+          "duration": 1,
+          "failureMessages": []
+        },
+        {
+          "ancestorTitles": ["", "CesiumService test suite"],
+          "fullName": " CesiumService test suite flyToMarket method should be called",
+          "status": "passed",
+          "title": "flyToMarket method should be called",
+          "duration": 0,
+          "failureMessages": []
+        }
+      ],
+      "startTime": 1654035466829,
+      "endTime": 1654035466836,
+      "status": "passed",
+      "message": "",
+      "name": "/home/geospatialweb/5gllc/ssot-ui/src/lib/services/cesium/index.test.ts"
+    }
+  ]
+}

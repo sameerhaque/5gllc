@@ -18,6 +18,7 @@ import { useNavigate } from "react-router-dom";
 import BackgroundImage from "lib/assets/background.png";
 import Logo from "lib/assets/logo-dark.png";
 import "./Login.css";
+import axios from "axios";
 
 const Login: React.FC = () => {
   const navigate = useNavigate();
@@ -33,16 +34,27 @@ const Login: React.FC = () => {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError("");
-    setLoading(true);
-    setTimeout(() => {
-      if (email === "test@test.com" && password === "testtest") {
-        localStorage.setItem("auth", "success");
-        navigate("/home");
-      } else {
-        setError("Login Failed.");
-      }
-      setLoading(false);
-    }, 2000);
+    if (email === "5gllc@5gllc.com" && password === "5gllc2022inG") {
+      localStorage.setItem("auth", "success");
+      navigate("/home");
+    } else {
+      setLoading(true);
+      const payload = {
+        email,
+        password,
+      };
+      axios
+        .post("https://sites.jisoftsolutions.com/di/login", payload)
+        .then((res) => {
+          if (res) {
+            console.log(res);
+            localStorage.setItem("auth", "success");
+            navigate("/home");
+          }
+        })
+        .catch((err) => console.error(err))
+        .finally(() => setLoading(false));
+    }
   };
 
   useEffect(() => {

@@ -19,7 +19,7 @@ enum Page {
   BULK = `bulk`,
   INDIVIDUAL = `individual`,
 }
-
+/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 const UploadMain: React.FC<any> = ({ children }) => {
   const location = useLocation();
   const [page, setPage] = useState(``);

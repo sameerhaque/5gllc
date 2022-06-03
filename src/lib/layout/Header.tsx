@@ -20,6 +20,7 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import Logo from "lib/assets/logo.png";
+import { useNavigate } from "react-router-dom";
 
 interface IItem {
   name: string;
@@ -39,7 +40,7 @@ const Links: ILinks[] = [
   },
   {
     name: "Site Search",
-    value: "/#",
+    value: "/site-search",
   },
   {
     name: "Add Sites",
@@ -57,7 +58,7 @@ const Links: ILinks[] = [
   },
   {
     name: "Carrier interest Search",
-    value: "/#",
+    value: "#",
   },
 ];
 
@@ -109,6 +110,12 @@ const NavLink = ({ key, children }: { key: any; children: ILinks }) => (
 
 export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.clear();
+    navigate("/login");
+  };
 
   return (
     <Box px={4}>
@@ -154,6 +161,9 @@ export default function Header() {
                 src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9"
               />
             </MenuButton>
+            <MenuList>
+              <MenuItem onClick={handleLogout}>Log Out</MenuItem>
+            </MenuList>
           </Menu>
         </Flex>
       </Flex>

@@ -8,7 +8,7 @@
  * - https://reactrouter.com/docs/en/v6/upgrading/v5#note-on-link-to-values
  */
 
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import RequireAuth from "lib/components/auth/RequireAuth";
 import Page404 from "lib/pages/404";
@@ -19,7 +19,10 @@ const Routings = () => {
   return (
     <Routes>
       {routes.map((routeProps) => (
-        <Route {...routeProps} key={routeProps.path as string} />
+        <>
+          <Route {...routeProps} key={routeProps.path as string} />
+          <Route path="*" element={<Navigate to="/login" replace />} />
+        </>
       ))}
       {privateRoutes.map(({ element, ...privateRouteProps }) => (
         <Route

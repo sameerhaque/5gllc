@@ -7,7 +7,7 @@ import Test from "lib/pages/test";
 import BulkUpload from "lib/pages/Upload/Bulk";
 import IndividualUpload from "lib/pages/Upload/Individual";
 import UploadMain from "lib/pages/Upload";
-import BlogList from "lib/pages/bloglist";
+import SiteSearch from "lib/pages/SiteSearch";
 
 export const routes: Array<PathRouteProps> = [
   {
@@ -26,6 +26,14 @@ export const privateRoutes: Array<PathRouteProps> = [
     element: (
       <Layout>
         <Home />
+      </Layout>
+    ),
+  },
+  {
+    path: "/site-search",
+    element: (
+      <Layout>
+        <SiteSearch />
       </Layout>
     ),
   },

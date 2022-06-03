@@ -1,5 +1,8 @@
 import type * as React from "react";
-
+/* eslint-disable
+  @typescript-eslint/no-explicit-any,
+  @typescript-eslint/no-unsafe-assignment,
+  @typescript-eslint/restrict-template-expressions */
 const SvgComponent: React.FC<any> = ({ color }) => (
   <div style={{ padding: 8, borderRadius: 8, backgroundColor: `${color}10` }}>
     <svg width={15} height={20} fill="none" xmlns="http://www.w3.org/2000/svg">

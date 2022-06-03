@@ -1,7 +1,7 @@
 import { AspectRatio, Box, Button, Input, Stack, Text } from "@chakra-ui/react";
 import { motion, useAnimation } from "framer-motion";
 import PreviousUploads, { Status } from "./PreviousUpload";
-
+/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 const lists: any[] = [
   {
     batch: "#5036",
@@ -96,6 +96,7 @@ const BulkUpload = () => {
               opacity="0"
               aria-hidden="true"
               accept="image/*"
+              /* eslint-disable-next-line @typescript-eslint/no-misused-promises */
               onDragEnter={startAnimation}
               onDragLeave={stopAnimation}
             />

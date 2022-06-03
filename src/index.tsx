@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import { ChakraProvider } from "@chakra-ui/react";
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";

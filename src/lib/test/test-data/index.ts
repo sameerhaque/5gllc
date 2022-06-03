@@ -1,3 +1,3 @@
 export default {
-  initialMarket: "nyc",
-};
+  initialMarket: 'nyc'
+}

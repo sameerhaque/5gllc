@@ -1,35 +1,35 @@
-import { AspectRatio, Box, Button, Input, Stack, Text } from "@chakra-ui/react";
-import { motion, useAnimation } from "framer-motion";
-import PreviousUploads, { Status } from "./PreviousUpload";
+import { AspectRatio, Box, Button, Input, Stack, Text } from '@chakra-ui/react'
+import { motion, useAnimation } from 'framer-motion'
+import PreviousUploads, { Status } from './PreviousUpload'
 /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 const lists: any[] = [
   {
-    batch: "#5036",
+    batch: '#5036',
     sites: 24,
-    date: "1 May 2022",
+    date: '1 May 2022',
     status: Status.SUCCESSFUL,
-    user: "John Smith1",
+    user: 'John Smith1'
   },
   {
-    batch: "#5037",
+    batch: '#5037',
     sites: 44,
-    date: "1 June 2022",
+    date: '1 June 2022',
     status: Status.WARNING,
-    user: "John Smith2",
+    user: 'John Smith2'
   },
   {
-    batch: "#5038",
+    batch: '#5038',
     sites: 20,
-    date: "1 July 2022",
+    date: '1 July 2022',
     status: Status.FAILED,
-    user: "John Smith3",
-  },
-];
+    user: 'John Smith3'
+  }
+]
 
 const BulkUpload = () => {
-  const controls = useAnimation();
-  const startAnimation = () => controls.start("hover");
-  const stopAnimation = () => controls.stop();
+  const controls = useAnimation()
+  const startAnimation = () => controls.start('hover')
+  const stopAnimation = () => controls.stop()
 
   return (
     <Box p={10} height="100%">
@@ -43,7 +43,7 @@ const BulkUpload = () => {
           role="group"
           transition="all 150ms ease-in-out"
           _hover={{
-            shadow: "md",
+            shadow: 'md'
           }}
           as={motion.div}
           initial="rest"
@@ -52,33 +52,11 @@ const BulkUpload = () => {
           whileHover="hover"
         >
           <Box position="relative" height="100%" width="100%">
-            <Box
-              position="absolute"
-              top="0"
-              left="0"
-              height="100%"
-              width="100%"
-              display="flex"
-              flexDirection="column"
-            >
-              <Stack
-                height="100%"
-                width="100%"
-                display="flex"
-                alignItems="center"
-                justify="center"
-                spacing="4"
-              >
-                <Stack
-                  p="8"
-                  textAlign="center"
-                  spacing="1"
-                  alignItems="center"
-                  justifyContent="center"
-                >
+            <Box position="absolute" top="0" left="0" height="100%" width="100%" display="flex" flexDirection="column">
+              <Stack height="100%" width="100%" display="flex" alignItems="center" justify="center" spacing="4">
+                <Stack p="8" textAlign="center" spacing="1" alignItems="center" justifyContent="center">
                   <Text fontWeight="light" mb={15}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam eleifend cursus enim id tempus.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend cursus enim id tempus.
                   </Text>
                   <Button backgroundColor="#012076" color="white" w={150}>
                     Upload File
@@ -105,7 +83,7 @@ const BulkUpload = () => {
       </AspectRatio>
       <PreviousUploads lists={lists} />
     </Box>
-  );
-};
+  )
+}
 
-export default BulkUpload;
+export default BulkUpload

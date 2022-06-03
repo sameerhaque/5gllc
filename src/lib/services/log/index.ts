@@ -1,8 +1,8 @@
-import { Service } from "typedi";
+import { Service } from 'typedi'
 
 @Service()
 export default class LogService {
   consoleLog(message: string): void {
-    console.log(message);
+    console.log(message)
   }
 }

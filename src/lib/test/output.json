@@ -14,7 +14,10 @@
     {
       "assertionResults": [
         {
-          "ancestorTitles": ["", "TileService test suite"],
+          "ancestorTitles": [
+            "",
+            "TileService test suite"
+          ],
           "fullName": " TileService test suite createTileSets method should be called",
           "status": "passed",
           "title": "createTileSets method should be called",
@@ -31,7 +34,10 @@
     {
       "assertionResults": [
         {
-          "ancestorTitles": ["", "LogService test suite"],
+          "ancestorTitles": [
+            "",
+            "LogService test suite"
+          ],
           "fullName": " LogService test suite consoleLog method should be called",
           "status": "passed",
           "title": "consoleLog method should be called",
@@ -48,7 +54,10 @@
     {
       "assertionResults": [
         {
-          "ancestorTitles": ["", "CesiumService test suite"],
+          "ancestorTitles": [
+            "",
+            "CesiumService test suite"
+          ],
           "fullName": " CesiumService test suite createCesiumViewer method should be called",
           "status": "passed",
           "title": "createCesiumViewer method should be called",
@@ -56,7 +65,10 @@
           "failureMessages": []
         },
         {
-          "ancestorTitles": ["", "CesiumService test suite"],
+          "ancestorTitles": [
+            "",
+            "CesiumService test suite"
+          ],
           "fullName": " CesiumService test suite loadTileSets method should be called",
           "status": "passed",
           "title": "loadTileSets method should be called",
@@ -64,7 +76,10 @@
           "failureMessages": []
         },
         {
-          "ancestorTitles": ["", "CesiumService test suite"],
+          "ancestorTitles": [
+            "",
+            "CesiumService test suite"
+          ],
           "fullName": " CesiumService test suite flyToMarket method should be called",
           "status": "passed",
           "title": "flyToMarket method should be called",

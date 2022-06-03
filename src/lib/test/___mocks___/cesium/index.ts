@@ -1,8 +1,8 @@
-import { Container } from "typedi";
+import { Container } from 'typedi'
 
-import { CesiumService } from "lib/services";
+import { CesiumService } from 'lib/services'
 
 export default function mockCesiumImplementation(): void {
-  const { viewer } = Container.get(CesiumService);
-  new CesiumService(viewer);
+  const { viewer } = Container.get(CesiumService)
+  new CesiumService(viewer)
 }

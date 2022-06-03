@@ -1,4 +1,4 @@
-import type * as React from "react";
+import type * as React from 'react'
 /* eslint-disable
   @typescript-eslint/no-explicit-any,
   @typescript-eslint/no-unsafe-assignment,
@@ -20,6 +20,6 @@ const SvgComponent: React.FC<any> = ({ color }) => (
       />
     </svg>
   </div>
-);
+)
 
-export default SvgComponent;
+export default SvgComponent

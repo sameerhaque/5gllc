@@ -19,6 +19,7 @@
     "up-latest": "yarn up --latest",
     "release": "standard-version",
     "push-release": "git push --follow-tags origin main",
+    "prepare": "husky install",
     "test": "vitest run",
     "test:watch": "vitest watch"
   },
